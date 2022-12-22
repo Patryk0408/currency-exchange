@@ -1,0 +1,15 @@
+.main {
+    max-width: 1000px;
+    margin: 50px auto 0;
+    background-color: hsl(208, 68%, 80%);
+    border-radius: 5px;
+}
+
+.main__title {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.main__title--red {
+    color: rgb(230, 20, 90);
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/table.css" />
+  <link rel="stylesheet" href="css/form.css" />
+  <script defer src="js/script.js"></script>
+  <title>Patryk Krawczyk - modul 4</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body class="body">
+  <header class="header">
+    <h1 class="header__title">Kantor wymiany walut</h1>
+  </header>
+
+  <main class="main">
+    <h2 class="main__title">
+      Witaj w kantorze wymiany walut! <br>
+      <span class="main__title--red">Z nami wymienisz taniej!</span>
+    </h2>
+    <section class="sectionTable">
+      <table class="table">
+        <caption class="table__caption">TYLKO U NAS TE WALUTY W TAKIM KURSIE:</caption>
+        <tr>
+          <th scope="col" class="table__cell table__cell--red">Waluta</th>
+          <th scope="col" class="table__cell table__cell--red">Wartość</th>
+          <th scope="col" class="table__cell table__cell--red">Wartość (złoty)</th>
+        </tr>
+        <tr>
+          <th scope="row" class="table__cell table__cell--fairy">
+            <span class="material-symbols-outlined">
+              euro
+            </span>
+          </th>
+          <td class="table__cell">1</td>
+          <td class="table__cell">4,69</td>
+        </tr>
+        <tr>
+          <th scope="row" class="table__cell table__cell--fairy">
+            <span class="material-symbols-outlined">
+              attach_money
+            </span>
+          </th>
+          <td class="table__cell">1</td>
+          <td class="table__cell">4,41</td>
+        </tr>
+        <tr>
+          <th scope="row" class="table__cell table__cell--fairy">
+            <span class="material-symbols-outlined">
+              currency_pound
+            </span>
+          </th>
+          <td class="table__cell">1</td>
+          <td class="table__cell">5,39</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="sectionForm">
+      <h2 class="section__header">Przelicz z nami!</h2>
+      <form class="form js-form">
+        <fieldset class="form__fieldset">
+          <legend>Kalkulator walut</legend>
+          <p>
+            <label>
+              Wybierz walutę:
+              <select class="js-cashValue" name="currencyExchange">
+                <option value="4.69">Euro</option>
+                <option value="4.41">Dolar Amerykański</option>
+                <option value="5.39">Funt</option>
+              </select>
+            </label>
+          </p>
+          <p>
+            <label>
+              Podaj kwotę:
+              <input class="js-plnValue" type="number" name="PLN" min="0" step="0.01" required>
+            </label>
+          </p>
+
+          <button class="form__button">Przelicz!</button>
+
+          <p>
+            Twoja wartość po wymianie: <span class="form__result js-result">0</span> zł.
+          </p>
+        </fieldset>
+      </form>
+      <p class="sectionForm__paragraph">
+        Takie ceny tylko u nas!
+      </p>
+    </section>
+  </main>
+</body>
+
+</html>
