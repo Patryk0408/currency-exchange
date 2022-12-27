@@ -1,15 +1,22 @@
-let cashValue = document.querySelector(".js-cashValue");
-let plnValue = document.querySelector(".js-plnValue");
-let form = document.querySelector(".js-form");
-let resultValue = document.querySelector(".js-result");
+{
+    const changeValue = (event) => {
+        event.preventDefault();
+        const cashValue = document.querySelector(".js-cashValue");
+        const plnValue = document.querySelector(".js-plnValue");
 
-form.addEventListener("submit", (event) => {
-    event.preventDefault();
+        const resultValue = document.querySelector(".js-result");
+        const cash = cashValue.value;
+        const pln = plnValue.value;
 
-    let cash = cashValue.value;
-    let pln = plnValue.value;
+        const result = cash * pln;
 
-    let result = cash * pln;
+        resultValue.innerText = result.toFixed(2);
+    };
 
-    resultValue.innerText = result.toFixed(2);
-});
+    const init = () => {
+        const form = document.querySelector(".js-form");
+        form.addEventListener("submit", changeValue);
+    };
+
+    init();
+}
