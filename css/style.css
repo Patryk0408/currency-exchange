@@ -9,4 +9,5 @@ html {
 .body {
     margin: 0 auto;
     font-family: 'Lato', sans-serif;
+    background-image: url(../image/currency-exchange-background-image.jpg);
 }
